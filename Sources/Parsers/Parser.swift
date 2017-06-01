@@ -48,8 +48,11 @@ public class Parser {
             } else { // extraction is failure
                 // If fail, move on by 1
                 let location = existingMatch.range.location + 1
-                remainingText = text.substring(from: text.index(text.startIndex, offsetBy: location))
-                startIndex = location
+                remainingText = ""
+                if let tempIndex = text.index(text.startIndex, offsetBy: location, limitedBy: text.endIndex) {
+                    remainingText = text.substring(from: tempIndex)
+                    startIndex = location
+                }
             }
             
             let remainingTextLength = remainingText.characters.count
