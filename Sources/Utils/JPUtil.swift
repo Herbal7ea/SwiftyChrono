@@ -9,7 +9,7 @@
 import Foundation
 
 // source: https://gist.github.com/sgr-ksmt/2dcf11a64cdb22d44517
-extension String {
+public extension String {
     private func convertFullWidthToHalfWidth(reverse: Bool) -> String {
         let str = NSMutableString(string: self) as CFMutableString
         CFStringTransform(str, nil, kCFStringTransformFullwidthHalfwidth, reverse)

@@ -23,7 +23,7 @@ func sortTwoNumbers(_ index1: Int, _ index2: Int) -> (lessNumber: Int, greaterNu
     return (lessNumber, greaterNumber)
 }
 
-extension NSTextCheckingResult {
+public extension NSTextCheckingResult {
     func isNotEmpty(atRangeIndex index: Int) -> Bool {
         return rangeAt(index).length != 0
     }
@@ -37,7 +37,7 @@ extension NSTextCheckingResult {
     }
 }
 
-extension String {
+public extension String {
     var firstString: String? {
         guard let char = characters.first else {
             return nil
@@ -80,13 +80,13 @@ extension String {
     }
 }
 
-extension NSRegularExpression {
+public extension NSRegularExpression {
     static func isMatch(forPattern pattern: String, in text: String) -> Bool {
         return (try? NSRegularExpression(pattern: pattern, options: .caseInsensitive))?.firstMatch(in: text, range: NSRange(location: 0, length: text.characters.count)) != nil
     }
 }
 
-extension Dictionary {
+public extension Dictionary {
     
     mutating func merge(with dictionary: Dictionary) {
         dictionary.forEach { updateValue($1, forKey: $0) }

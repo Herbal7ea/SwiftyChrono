@@ -8,7 +8,7 @@
 
 import Foundation
 
-let DE_WEEKDAY_OFFSET = [
+public let DE_WEEKDAY_OFFSET = [
     "sonntag": 0,
     "so": 0,
     "montag": 1,
@@ -24,9 +24,9 @@ let DE_WEEKDAY_OFFSET = [
     "samstag": 6,
     "sa": 6
 ]
-let DE_WEEKDAY_WORDS_PATTERN = "(?:" + DE_WEEKDAY_OFFSET.keys.joined(separator: "|") + ")"
+public let DE_WEEKDAY_WORDS_PATTERN = "(?:" + DE_WEEKDAY_OFFSET.keys.joined(separator: "|") + ")"
 
-let DE_MONTH_OFFSET = [
+public let DE_MONTH_OFFSET = [
     "januar": 1,
     "jan": 1,
     "jan.": 1,
@@ -64,9 +64,9 @@ let DE_MONTH_OFFSET = [
     "dez": 12,
     "dez.": 12
 ]
-let DE_MONTH_OFFSET_PATTERN = "(?:" + DE_MONTH_OFFSET.keys.joined(separator: "|") + ")"
+public let DE_MONTH_OFFSET_PATTERN = "(?:" + DE_MONTH_OFFSET.keys.joined(separator: "|") + ")"
 
-let DE_INTEGER1_WORDS = [
+public let DE_INTEGER1_WORDS = [
     "einen": 1,
     "eine": 1,
     "einer": 1,
@@ -74,9 +74,9 @@ let DE_INTEGER1_WORDS = [
     "eines": 1,
     "einem": 1,
 ]
-let DE_INTEGER1_WORDS_PATTERN = "(?:" + DE_INTEGER1_WORDS.keys.joined(separator: "|") + ")"
+public let DE_INTEGER1_WORDS_PATTERN = "(?:" + DE_INTEGER1_WORDS.keys.joined(separator: "|") + ")"
 
-let DE_INTEGER_WORDS = DE_INTEGER1_WORDS.merged(with: [
+public let DE_INTEGER_WORDS = DE_INTEGER1_WORDS.merged(with: [
     "zwei": 2,
     "drei": 3,
     "vier": 4,
@@ -89,7 +89,7 @@ let DE_INTEGER_WORDS = DE_INTEGER1_WORDS.merged(with: [
     "elf": 11,
     "zwölf": 12
 ])
-let DE_INTEGER_WORDS_PATTERN = "(?:" + DE_INTEGER_WORDS.keys.joined(separator: "|") + ")"
+public let DE_INTEGER_WORDS_PATTERN = "(?:" + DE_INTEGER_WORDS.keys.joined(separator: "|") + ")"
 
 // all need /n/r/m/s
 private let DE_ORDINAL_WORDS_BASIC = [
@@ -126,7 +126,7 @@ private let DE_ORDINAL_WORDS_BASIC = [
     "einunddreißigste": 31
 ]
 
-let DE_ORDINAL_WORDS = DE_ORDINAL_WORDS_BASIC.reduce([String: Int]()) { (result, keyValue) -> [String: Int] in
+public let DE_ORDINAL_WORDS = DE_ORDINAL_WORDS_BASIC.reduce([String: Int]()) { (result, keyValue) -> [String: Int] in
     var result = result
     result[keyValue.key + "n"] = keyValue.value
     result[keyValue.key + "r"] = keyValue.value
@@ -135,4 +135,4 @@ let DE_ORDINAL_WORDS = DE_ORDINAL_WORDS_BASIC.reduce([String: Int]()) { (result,
     return result
 }
 
-let DE_ORDINAL_WORDS_PATTERN = "(?:\(DE_ORDINAL_WORDS_BASIC.keys.map{ $0 + "[nrms]?" }.joined(separator: "|").replacingOccurrences(of: " ", with: "[ -]")))";
+public let DE_ORDINAL_WORDS_PATTERN = "(?:\(DE_ORDINAL_WORDS_BASIC.keys.map{ $0 + "[nrms]?" }.joined(separator: "|").replacingOccurrences(of: " ", with: "[ -]")))";

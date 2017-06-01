@@ -8,7 +8,7 @@
 
 import Foundation
 
-let ES_WEEKDAY_OFFSET = [
+public let ES_WEEKDAY_OFFSET = [
     "domingo": 0,
     "dom": 0,
     "lunes": 1,
@@ -28,7 +28,7 @@ let ES_WEEKDAY_OFFSET = [
     "sab": 6,
 ]
 
-let ES_MONTH_OFFSET = [
+public let ES_MONTH_OFFSET = [
     "enero": 1,
     "ene": 1,
     "ene.": 1,

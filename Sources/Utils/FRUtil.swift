@@ -8,7 +8,7 @@
 
 import Foundation
 
-let FR_WEEKDAY_OFFSET = [
+public let FR_WEEKDAY_OFFSET = [
     "dimanche": 0,
     "dim": 0,
     "lundi": 1,
@@ -25,7 +25,7 @@ let FR_WEEKDAY_OFFSET = [
     "sam": 6
 ]
 
-let FR_MONTH_OFFSET = [
+public let FR_MONTH_OFFSET = [
     "janvier": 1,
     "jan": 1,
     "jan.": 1,
@@ -63,8 +63,8 @@ let FR_MONTH_OFFSET = [
     "dec.": 12
 ]
 
-let FR_INTEGER_WORDS_PATTERN = "(?:un|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize)"
-let FR_INTEGER_WORDS = [
+public let FR_INTEGER_WORDS_PATTERN = "(?:un|deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize)"
+public let FR_INTEGER_WORDS = [
     "un" : 1,
     "deux" : 2,
     "trois" : 3,

@@ -8,7 +8,7 @@
 
 import Foundation
 
-let EN_WEEKDAY_OFFSET = [
+public let EN_WEEKDAY_OFFSET = [
     "sunday": 0,
     "sun": 0,
     "monday": 1,
@@ -27,9 +27,9 @@ let EN_WEEKDAY_OFFSET = [
     "sat": 6
 ]
 
-let EN_WEEKDAY_OFFSET_PATTERN = "(?:" + EN_WEEKDAY_OFFSET.keys.joined(separator: "|") + ")"
+public let EN_WEEKDAY_OFFSET_PATTERN = "(?:" + EN_WEEKDAY_OFFSET.keys.joined(separator: "|") + ")"
 
-let EN_MONTH_OFFSET = [
+public let EN_MONTH_OFFSET = [
     "january": 1,
     "jan": 1,
     "jan.": 1,
@@ -68,7 +68,7 @@ let EN_MONTH_OFFSET = [
     "dec.": 12
 ]
 
-let EN_INTEGER_WORDS = [
+public let EN_INTEGER_WORDS = [
     "one": 1,
     "two": 2,
     "three": 3,
@@ -82,9 +82,9 @@ let EN_INTEGER_WORDS = [
     "eleven": 11,
     "twelve": 12
 ]
-let EN_INTEGER_WORDS_PATTERN = "(?:" + EN_INTEGER_WORDS.keys.joined(separator: "|") + ")"
+public let EN_INTEGER_WORDS_PATTERN = "(?:" + EN_INTEGER_WORDS.keys.joined(separator: "|") + ")"
 
-let EN_ORDINAL_WORDS = [
+public let EN_ORDINAL_WORDS = [
     "first": 1,
     "second": 2,
     "third": 3,
@@ -117,4 +117,4 @@ let EN_ORDINAL_WORDS = [
     "thirtieth": 30,
     "thirty first": 31
 ]
-let EN_ORDINAL_WORDS_PATTERN = "(?:\(EN_ORDINAL_WORDS.keys.joined(separator: "|").replacingOccurrences(of: " ", with: "[ -]")))"
+public let EN_ORDINAL_WORDS_PATTERN = "(?:\(EN_ORDINAL_WORDS.keys.joined(separator: "|").replacingOccurrences(of: " ", with: "[ -]")))"

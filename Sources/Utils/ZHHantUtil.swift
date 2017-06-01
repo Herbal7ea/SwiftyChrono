@@ -8,7 +8,7 @@
 
 import Foundation
 
-let ZHHANT_NUMBER = [
+public let ZHHANT_NUMBER = [
     "零": 0,
     "一": 1,
     "二": 2,
@@ -25,9 +25,9 @@ let ZHHANT_NUMBER = [
     "卅": 30,
 ]
 
-let ZHHANT_NUMBER_PATTERN = "[" + ZHHANT_NUMBER.keys.joined(separator: "") + "]"
+public let ZHHANT_NUMBER_PATTERN = "[" + ZHHANT_NUMBER.keys.joined(separator: "") + "]"
 
-let ZHHANT_WEEKDAY_OFFSET = [
+public let ZHHANT_WEEKDAY_OFFSET = [
     "天": 0,
     "日": 0,
     "一": 1,
@@ -38,9 +38,9 @@ let ZHHANT_WEEKDAY_OFFSET = [
     "六": 6,
 ]
 
-let ZHHANT_WEEKDAY_OFFSET_PATTERN = "[" + ZHHANT_WEEKDAY_OFFSET.keys.joined(separator: "") + "]"
+public let ZHHANT_WEEKDAY_OFFSET_PATTERN = "[" + ZHHANT_WEEKDAY_OFFSET.keys.joined(separator: "") + "]"
 
-func ZHStringToNumber(text: String) -> Int {
+public func ZHStringToNumber(text: String) -> Int {
     var number = 0;
     
     for char in text.characters.map({ String($0) }) {
@@ -55,7 +55,7 @@ func ZHStringToNumber(text: String) -> Int {
     return number
 }
 
-func ZHStringToYear(text: String) -> Int {
+public func ZHStringToYear(text: String) -> Int {
     var string = ""
     
     for char in text.characters.map({ String($0) }) {

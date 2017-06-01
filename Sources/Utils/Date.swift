@@ -18,7 +18,7 @@ let utcTimeZone: TimeZone = TimeZone(identifier: "UTC")!
 
 private let noneZeroComponents: Set<Calendar.Component> = [.year, .month, .day]
 
-extension Date {
+public extension Date {
     func setOrAdded(_ value: Int, _ component: Calendar.Component) -> Date {
         let d = self
         var value = value
